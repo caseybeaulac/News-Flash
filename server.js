@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/newsflashdb", { useNewUrlParser: true });
+mongoose.connect("mongodb://caseybeaulac:&pwmlab9@ds235658.mlab.com:35658/heroku_clf6bv2h", { useNewUrlParser: true });
 var databaseUrl = "newsflashdb";
 var collections = ["nhlarticles"];
 
