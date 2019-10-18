@@ -6,7 +6,8 @@ $.getJSON("/articles", function (data) {
 });
 
 $(document).on("click", "p", function () {
-    ("#comments").empty();
+    console.log("YES1")
+    $("#comments").empty();
     var thisID = $(this).attr("data-id");
 
     $.ajax({
@@ -19,7 +20,7 @@ $(document).on("click", "p", function () {
             $("#comments").append("<h2>" + data.title + "<h2>");
             $("#comments").append("<input id='titleinput' name='title' >");
             $("#comments").append("<textarea id='bodyinput' name='body'></textarea>");
-            $("#comments").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
+            $("#comments").append("<button data-id='" + data._id + "' id='savecomment'>Save Comment</button>");
 
             if (data.comment) {
                 $("#titleinput").val(data.comment.title);
